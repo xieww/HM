@@ -9,7 +9,7 @@
 
 <span style="text-center: center "></span>
 
-## 【上海站】许巍“无尽光芒”巡回演唱会
+## [上海站]许巍“无尽光芒”巡回演唱会
 ![许巍](https://img0.tking.cn/assets/img/5Rzy7SksST_.jpg "许巍")
 
 **时间：** 2019.06.29 19:30
