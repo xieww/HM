@@ -1,4 +1,4 @@
-<h1><p align="center" style="color: #dd0000">HM</p></h1>
+<h1><p align="center" style="color:'#dd0000' ">HM</p></h1>
 
 - [HM](#hm)
   * [【上海站】许巍“无尽光芒”巡回演唱会](#【上海站】许巍“无尽光芒”巡回演唱会)
