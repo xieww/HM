@@ -24,6 +24,17 @@ a {
   height: 680px;
   margin-top: 10px;
 }
+
+#no-view {
+  width: 300px;
+  height: 500px;
+  color: #FF0000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #text {
   width: 272px;
   height: 560px;
