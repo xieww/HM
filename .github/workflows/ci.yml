@@ -1,4 +1,4 @@
-name: Promise Test coverage
+name: qixi
 on:
   push:
     branches:
