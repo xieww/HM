@@ -201,7 +201,7 @@
         together.setMilliseconds(2);				//秒第二位
 
         if (query) {
-          if (query !== "lu" || query !== "ting" || query !== "yi" || query !== "xian") {
+          if (!(query === "lu" || query === "ting" || query === "yi" || query === "xian")) {
             $("#code").show().typewriter();
           }
         }
