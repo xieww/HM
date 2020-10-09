@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./genius.css">
+  <title>genius</title>
+</head>
+<body>
+  <div class="monsterBody">
+    <div id="monsterHead" class="monster">
+        <div class="down"></div>
+        <div class="eye">
+          <div class="eyeball"></div>
+        </div>
+        <div class="mouth"></div>
+    </div>
+    <div class="monster blue">
+        <div class="down"></div>
+        <div class="eye">
+          <div class="eyeball"></div>
+        </div>
+        <div class="mouth"></div>
+    </div>
+  </div>
+  <div  class="loadBox">
+      <div id="loadTop" class="monster">
+          <div class="down"></div>
+          <div class="eye">
+            <div class="eyeball"></div>
+          </div>
+          <div class="mouth"></div>
+      </div>
+      <div class="loading">
+        <div class="loading-progress"></div>
+        <div class="loading-text">0%</div>
+      </div>
+  </div>
+  <script>
+  let count = 0;
+  var loading = document.getElementsByClassName("loading-progress")[0];  
+  var loadBar = document.getElementById("loadTop");
+  var loadBox = document.getElementsByClassName("loadBox")[0];  
+  var text = document.getElementsByClassName("loading-text")[0]; 
+
+  const timer = setInterval(() => {
+    count +=1;
+    // loading.style.clip = "rect(0px," + count + "px,60px,0px)";
+    loading.style.width = Number(count) + '%'; 
+    text.innerHTML = Number(count) + '%'; 
+    if (count === 100) {
+      loadBar.classList.add("disappear");
+      setTimeout(() => {
+        loadBox.classList.add("fly");
+      }, 500);
+      clearInterval(timer);
+    }
+  }, 80); 
+  </script>
+</body>
+</html>
