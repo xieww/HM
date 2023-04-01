@@ -45,7 +45,6 @@
     </div>
   </div>
   <script>
-    var count = 0;
     var loading = document.getElementsByClassName("loading-progress")[0];
     var loadBar = document.getElementById("loadTop");
     var loadBox = document.getElementsByClassName("loadBox")[0];
@@ -54,14 +53,15 @@
     loadBar.addEventListener('click', start)
 
     function start() {
-      const timer = setInterval(() => {
+      var count = 0;
+      var timer = setInterval(() => {
         count += 1;
         // loading.style.clip = "rect(0px," + count + "px,60px,0px)";
         loading.style.width = Number(count) + '%';
         text.innerHTML = Number(count) + '%';
         if (count === 100) {
           loadBar.classList.add("disappear");
-          const tt = setTimeout(() => {
+          var tt = setTimeout(() => {
             loadBox.classList.add("fly");
             clearTimeout(tt);
           }, 500);
@@ -73,7 +73,8 @@
   </script>
 </body>
 
-</html><!DOCTYPE html>
+</html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
