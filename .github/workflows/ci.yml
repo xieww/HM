@@ -1,4 +1,4 @@
-name: qixi
+name: publish service
 on:
   push:
     branches:
@@ -16,4 +16,4 @@ jobs:
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: start
+        FOLDER: start-page
