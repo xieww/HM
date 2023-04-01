@@ -1,4 +1,4 @@
-name: publish service
+name: publish-service
 on:
   push:
     branches:
