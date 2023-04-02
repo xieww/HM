@@ -35,7 +35,7 @@
         <div class="eyeball"></div>
       </div>
       <div class="mouth"></div>
-      <div class="bubble-box">
+      <div id="bubble-box" class="bubble-box">
         诺，请狠狠的点我！
       </div>
     </div>
@@ -54,8 +54,20 @@
     var loadBar = document.getElementById("loadTop");
     var loadBox = document.getElementsByClassName("loadBox")[0];
     var text = document.getElementsByClassName("loading-text")[0];
+    var bubbleBox = document.getElementById("bubble-box");
 
     loadBar.addEventListener('click', start)
+
+    window.onload = function () {
+      const tm = setTimeout(() => {
+        bubbleBox.style.opacity = 1;
+        clearTimeout(tm);
+      }, 2000);
+      const tms = setTimeout(() => {
+        bubbleBox.style.opacity = 0;
+        clearTimeout(tms);
+      }, 4000);
+    }
 
     function start() {
       var count = 0;
@@ -75,19 +87,17 @@
       }, 80);
     }
 
-    var timerout = Date.now() - new Date(202304012100) > 12 * 60 * 60 * 100;
+    var timerout = Date.now() - new Date(1680419839933) > 12 * 60 * 60 * 100;
     var queryParams = window.location.search;
     var query = queryParams && queryParams.split("?") && queryParams.split("?")[1] && queryParams.split("?")[1].split("&") && queryParams.split("?")[1].split("&")[0].split("=")[1];
     var emptyElement = document.getElementById('empty');
     var monsterBodyElement = document.getElementById('monsterBody');
     var loadBoxElement = document.getElementById('loadBox');
-
-    if (!query && timerout) {
+    if (query && !timerout) {
+      emptyElement.style.display = "none";
+    } else {
       monsterBodyElement.style.display = "none";
       loadBoxElement.style.display = "none";
-    } else {
-      emptyElement.style.display = "block";
-      document.body.style.backgroundColor = "#f1f1f1";
     }
   </script>
 </body>
