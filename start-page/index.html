@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="monsterBody">
+  <div id="monsterBody" class="monsterBody">
     <div id="monsterHead" class="monster">
       <div class="down"></div>
       <div class="eye">
@@ -28,7 +28,7 @@
       <span class="title">旺仔👦🏻</span>
     </div>
   </div>
-  <div class="loadBox">
+  <div id="loadBox" class="loadBox">
     <div id="loadTop" class="monster">
       <div class="down"></div>
       <div class="eye">
@@ -42,6 +42,11 @@
     <div class="loading">
       <div class="loading-progress"></div>
       <div class="loading-text">0%</div>
+    </div>
+  </div>
+  <div id="empty" class="empty">
+    <div class="typing">
+      祝你往后余生遇到的每一个人，都值得错过我...
     </div>
   </div>
   <script>
@@ -70,6 +75,20 @@
       }, 80);
     }
 
+    var timerout = Date.now() - new Date(202304012100) > 12 * 60 * 60 * 100;
+    var queryParams = window.location.search;
+    var query = queryParams && queryParams.split("?") && queryParams.split("?")[1] && queryParams.split("?")[1].split("&") && queryParams.split("?")[1].split("&")[0].split("=")[1];
+    var emptyElement = document.getElementById('empty');
+    var monsterBodyElement = document.getElementById('monsterBody');
+    var loadBoxElement = document.getElementById('loadBox');
+
+    if (!query && timerout) {
+      monsterBodyElement.style.display = "none";
+      loadBoxElement.style.display = "none";
+    } else {
+      emptyElement.style.display = "block";
+      document.body.style.backgroundColor = "#f1f1f1";
+    }
   </script>
 </body>
 
