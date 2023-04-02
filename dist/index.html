@@ -57,14 +57,14 @@
   </div>
   <script>
     (function () {
-      var timerout = Date.now() - new Date(202008242100) > 12 * 60 * 60 * 100;
+      var timerout = Date.now() - new Date(202304012100) > 12 * 60 * 60 * 100;
       var queryParams = window.location.search;
       var query = queryParams && queryParams.split("?") && queryParams.split("?")[1] && queryParams.split("?")[1].split("&") && queryParams.split("?")[1].split("&")[0].split("=")[1];
-      if (!query) {
-        $("#wrap").hide();
-        $("#no-view").hide();
-      }
-      if (timerout) {
+      // if (!query) {
+      //   $("#wrap").hide();
+      //   $("#no-view").hide();
+      // }
+      if (!query && timerout) {
         $("#wrap").hide();
         $("#no-view").show();
       } else {
